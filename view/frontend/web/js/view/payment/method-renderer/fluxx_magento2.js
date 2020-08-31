@@ -48,6 +48,8 @@ define(
                 var self = this;
                 var form_key = $.cookie("form_key");
                 var urlCheck = urlBuild.build("fluxx/CreditRating/check/form_key/"+form_key);
+                var datearray = date.split("/");
+                date = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
                 $.ajax({
                     url: urlCheck,
                     dataType: "json",
